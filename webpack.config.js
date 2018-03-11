@@ -2,11 +2,6 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devServer: {
-    inline: true,
-    contentBase: './build',
-    port: 3000
-  },
   context: path.resolve(__dirname, './'),
   entry: './app/index.js',
   output: {
