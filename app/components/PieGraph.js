@@ -7,6 +7,7 @@ class BarGraph extends Component {
     super(props);
 
     this.initialzeData = this.initialzeData.bind(this);
+    
     this.initialzeData(this.props.graphData);
   }
   componentWillReceiveProps(nextProps) {

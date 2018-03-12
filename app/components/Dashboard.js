@@ -16,7 +16,7 @@ class Dashboard extends Component {
       donor_name     : '',
       donor_age_group: '',
       donor_city     : '',
-      donation_cause  : '',
+      donation_cause : '',
       donation_amount: '',
       ageOptions     : [],
       cityOptions    : [],
@@ -85,9 +85,12 @@ class Dashboard extends Component {
     }
   }
   handleAmount(e) {
-    this.setState({
-      donation_amount: e.target.value
-    });
+    var regex = /^[0-9]*(?:\.\d{1,2})?$/;    // allow only numbers [0-9] 
+    if(regex.test(e.target.value)) {
+      this.setState({
+        donation_amount: e.target.value
+      });
+    }
   }
   submitClick() {
     if(this.state.donor_name
